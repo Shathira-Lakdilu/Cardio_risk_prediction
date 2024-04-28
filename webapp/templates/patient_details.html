@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Details</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Heart Disease Risk Level Predictor</h1>
+        <p>Please fill out this form with your correct and true details</p>
+
+        <form action="http://127.0.0.1:5000/getresults" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required/>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender (0-male,1-female):</label>
+                <input type="number" id="gender" name="gender" min="0" max="1" required/>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required/>
+            </div>
+            <div class="form-group">
+                <label for="tc">TC (mg/dL):</label>
+                <input type="number" id="tc" name="tc" required/>
+            </div>
+            <div class="form-group">
+                <label for="hdl">HDL (mg/dL):</label>
+                <input type="number" id="hdl" name="hdl" required/>
+            </div>
+            <div class="form-group">
+                <label for="smoke">Smoke (1-yes, 0-no):</label>
+                <input type="number" id="smoke" name="smoke" min="0" max="1" required/>
+            </div>
+            <div class="form-group">
+                <label for="bpm">Blood Pressure Medication (0-not taking, 1-taking):</label>
+                <input type="number" id="bpm" name="bpm" min="0" max="1" required/>
+            </div>
+            <div class="form-group">
+                <label for="diab">Diabetics (1-yes, 0-no):</label>
+                <input type="number" id="diab" name="diab" min="0" max="1" required/>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit Details"/>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
